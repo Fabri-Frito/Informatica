@@ -1,9 +1,6 @@
 const dropdawn = document.querySelectorAll('nav');
 
 dropdawn.forEach(dropdawn => {
-    const boton = dropdawn.querySelector('.boton');
-    const menu = dropdawn.querySelector('.menu');
-    const options = dropdawn.querySelectorAll('.menu li');
 
     const boton2 = dropdawn.querySelector('.boton2');
     const menu2 = dropdawn.querySelector('.menu2');
@@ -13,38 +10,7 @@ dropdawn.forEach(dropdawn => {
     const menu3 = dropdawn.querySelector('.menu3');
     const options3 = dropdawn.querySelectorAll('.menu3 li');
 
-    /*---------------------------------------
-      ----------- PRINCIPAL -----------------
-      ---------------------------------------*/
-    boton.addEventListener('click', () => {
-        boton.classList.toggle('boton-clieked');
-
-        menu.classList.toggle('menu-open');
-
-        menu2.classList.remove('menu2-open');
-
-        menu3.classList.remove('menu3-open');
-    });
-
-    options.forEach(option => {
-        
-        option.addEventListener('click', () => {
-
-            boton.classList.remove('boton-clicked');
-
-            menu2.classList.remove('menu2-open');
-
-            menu3.classList.remove('menu3-open');
-
-            options.forEach(option => {
-                option.classList.remove('active');
-            });
-
-            option.classList.add('active');
-        });
-    });
-
-
+    
     /*----------------------------------------
       ---------------- RAMAS -----------------
       ----------------------------------------*/

@@ -1,145 +1,124 @@
-/*---------------------------------------------
-  ---------- BOTON Y MENU EN GENERAL ----------
-  ---------------------------------------------*/
-nav{
+/*-------------------------------------
+  ---------- MENU EN GENERAL ----------
+  -------------------------------------*/
+nav{  
+  text-align: center;
   position: relative;
-  bottom: 6.5em;
-  left: 1em;
-  width: 3.3%;
-  background: #e67d05;
-  border-radius: 0.5em;
+  border: 2px solid #e5edff;
+  box-shadow: 0px 1px 10px 0px #0000002a;
+  height: 4em;
 }
 
 nav *{
   box-sizing: border-box;
 }
 
-.boton{
-  color: rgb(248, 248, 248);
-  font-size: 3em;
-  margin-right:52.9em;
-  align-items: center;
-  cursor: pointer;
-}
-
-.boton:hover{
-  color: #2c77d8;
-}
-
-.enlace{
-  text-decoration: none;
-  color: #000000;
-  bottom: 1%;
-  font-size: medium;
-}
-
-
-/*------------------------------------
-  ---------- MENU principal ----------
-  ------------------------------------*/
 .menu{
   list-style: none;
-  padding: 0.2em 0.5em;
-  margin-top: 0;
-  background: #2c77d8;
-  border: 1px solid #1164cf;
-  box-shadow: 0 0.5em 1em #1164cf;
-  border-radius: 0.5em;
-  color: #000000;
-  position: absolute;
-  top: 5em;
-  left: 194%;
-  width: 15em;
-  text-align: center;
-  transform: translateX(-50%);
-  opacity: 0;
-  display: none;
-  transition: 0.2s;
-  z-index: 1  ;
+  display: inline-block;
 }
 
 .menu li{
-  padding: 0.7em 0.5em;
-  margin: 0.3em 0em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  transition: background 0.2s ease; /* transición suave solo del color */
-}
-
-.menu li:hover{
-  background: #ec8800;
-  transform: none; /* evita cualquier escalado visual */
-}
-
-.menu li a {
-  display: block;        /* hace que el enlace use todo el espacio del li */
-  color: #000;           /* asegura el color fijo */
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0px;
+  bottom: 0.5em;
+  float: left;
+  margin-top: 5px;
+  right: 1em;
+
+  &:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #185cc2;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover::before{
+    width: 100%;
+    left: 0;
+  }
 }
 
-.menu li a:hover {
-  color: #000;           /* evita que cambie el color del texto o tamaño */
-  font-size: inherit;    /* evita agrandamiento del texto */
+.menu li a{
+  display: block;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  width: 11.5em;
 }
+
+
 
 .active{
-  background: #ec8800;
+  background: #23242a;
 }
 
-.menu-open{
-  display: block;
-  opacity: 1;
-}
 
 
 /*-----------------------------------
   ---------- MENU DE RAMAS ----------
   -----------------------------------*/
+.boton2{
+  cursor: pointer;
+  width: 11.5em;
+}
+
 .menu2{
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #2c77d8;
-  border: 1px solid #1164cf;
-  box-shadow: 0 0.5em 1em #1164cf;
+  background: #ffffff;
+  border: 1px solid #d6deee;
+  box-shadow: 0 0.5em 1em rgba(84, 84, 88, 0.904);
   border-radius: 0.5em;
   color: #000000;
   position: absolute;
-  left: 25em;
-  top: 11em;
-  width: 15em;
+  left: 50%;
+  top: 4.5em;
+  width: 13.5%;
   transform: translateX(-50%);
   opacity: 0;
   display: none;
   transition: 0.2s;
   z-index: 1;
+
 }
 
 .menu2 li{
+  text-align: left;
   padding: 0.7em 0.5em;
   margin: 0.3em 0em;
-  border-radius: 0.5em;
   cursor: pointer;
-  transition: background 0.2s ease; /* transición suave solo del color */
+
+  &:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #d1750c;
+    position: relative;
+    left: 0%;
+    top: 30px;
+    transition: all 0.5s;
+  }
+
+  &:hover::before{
+    width: 100%;
+  }
 }
 
-.menu2 li:hover{
-  background: #ec8800;
-  transform: none; /* evita cualquier escalado visual */
-}
-
-.menu2 li a {
-  display: block;        /* hace que el enlace use todo el espacio del li */
-  color: #000;           /* asegura el color fijo */
+.menu2 li a{
   text-decoration: none;
-}
-
-.menu2 li a:hover {
-  color: #000;           /* evita que cambie el color del texto o tamaño */
-  font-size: inherit;    /* evita agrandamiento del texto */
-}
-
-.active2{
-  background: #ec8800;
+  color: #000000;
 }
 
 .menu2-open{
@@ -151,18 +130,23 @@ nav *{
 /*--------------------------------------
   ---------- MENU DE ESTUDIOS ----------
   --------------------------------------*/
+.boton3{
+  cursor: pointer;
+  width: 11.5em;
+}
+
 .menu3{
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #2c77d8;
-  border: 1px solid #1164cf;
-  box-shadow: 0 0.5em 1em #1164cf;
+  background: #ffffff;
+  border: 1px solid #d6deee;
+  box-shadow: 0 0.5em 1em rgba(84, 84, 88, 0.904);
   border-radius: 0.5em;
   color: #000000;
   position: absolute;
-  top: 14.2em;
-  left: 25em;
-  width: 15em;
+  top: 4.5em;
+  left: 63.3%;
+  width: 13.5%;
   transform: translateX(-50%);
   opacity: 0;
   display: none;
@@ -171,18 +155,32 @@ nav *{
 }
 
 .menu3 li{
+  text-align: left;
   padding: 0.7em 0.5em;
   margin: 0.3em 0em;
   border-radius: 0.5em;
   cursor: pointer;
+
+   &:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #d1750c;
+    position: relative;
+    left: 0%;
+    top: 30px;
+    transition: all 0.5s;
+  }
+
+  &:hover::before{
+    width: 100%;
+  }
 }
 
-.menu3 li:hover{
-  background: #ec8800;
-}
-
-.active3{
-  background: #ec8800;
+.menu3 li a{
+  text-decoration: none;
+  color: #000000;
 }
 
 .menu3-open{
@@ -190,94 +188,4 @@ nav *{
   opacity: 1;
 }
 
-/*-------------------------------------------------------------- 
-  ---------- MENU RESPONSIVO PARA CELULARES Y TABLETS ---------- 
-  --------------------------------------------------------------*/
-@media (max-width: 1669px) {
-  nav{
-    width: 4%;
-  }
 
-   @media (max-width: 1440px) {
-  nav{
-    width: 5.5%;
-  }
-}
-  
-}
-  
-
-
-@media (max-width: 1062px) {
-  nav {
-    position: static;
-    text-align: center;
-    background: #1164cf;
-    border-radius: 0.5em;
-    width: 100%;
-  }
-
-  .boton {
-    font-size: 1.8rem;
-    margin: 0;
-    padding: 0.5em 1em;
-    text-align: center;
-  }
-
-  .menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    border-radius: 0em 0em 0.5em 0.5em;
-    transform: none;
-  }
-
-  .menu li {
-    padding: 1em;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #ec8800;
-    border: 3px solid #ec8800;
-    box-shadow: 0 0.1em 0.1em #ec8800;
-    border-radius: 5em;
-  }
-
-  .menu li:hover {
-    background: #ec8800;
-  }
-
-  /* Menús secundarios (Ramas y Estudios) */
-  .menu2, .menu3 {
-    position: static;
-    width: 100%;
-    background-color: #1164cf;
-    border: none;
-    box-shadow: none;
-    border-radius: 2em;
-    transform: none;
-  }
-
-  .menu2 li, .menu3 li {
-    padding: 1em;
-    background: #245e8d;
-    font-weight:  bold;
-    border: 3px solid #245e8d;
-    border-radius: 5em;
-    text-align: center;
-  }
-
-  /* Ajusta íconos o botones */
-  .boton2, .boton3 {
-    display: block;
-    text-align: center;
-    padding: 1em;
-    background: #2c77d8;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-  }
-
-  .boton2:hover, .boton3:hover {
-    background: #ec8800;
-  }
-}
